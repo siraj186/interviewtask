@@ -14,14 +14,6 @@ public class FloatingJoystick : Joystick
 
     public override void OnPointerDown(PointerEventData eventData)
     {
-        //if (PlayerController.Instance.isDead || GameManager.Instance.isLevelComplete)
-        //    return;
-
-        //if(GameManager.Instance.helpHand.activeInHierarchy)
-        //{
-        //    GameManager.Instance.helpHand.SetActive(false);
-        //}
-        //PlayerController.Instance.ResumeCharacter();
         background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
         background.gameObject.SetActive(true);
         base.OnPointerDown(eventData);
@@ -29,11 +21,7 @@ public class FloatingJoystick : Joystick
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-        //if (PlayerController.Instance.isAlreadyDead || GameManager.Instance.isLevelComplete)
-        //    return;
-
-        //PlayerController.Instance.PauseCharacter();
-        background.gameObject.SetActive(false);
+        //background.gameObject.SetActive(false);
         base.OnPointerUp(eventData);
     }
 }
